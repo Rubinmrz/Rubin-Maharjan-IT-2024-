@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse</title>
+</head>
+<body>
+
+
+<div id="myDiv" onmouseover="mOver()" onmouseout="mOut()">Touch me</div>
+
+<script>
+
+    function mOver() {
+        var divElement = document.getElementById('myDiv');
+        divElement.innerHTML = "Arigatto!";
+    }
+
+   
+    function mOut() {
+        var divElement = document.getElementById('myDiv');
+        divElement.innerHTML = "Touch Me";
+    }
+</script>
+
+</body>
+</html>
