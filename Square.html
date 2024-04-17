@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title> Gorra</title>
+        <h1>BAKA</h1>
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: slategrey;
+                overflow: hidden;
+            }
+            .loader, .loader span{
+                width: 10em;
+                height: 10em;
+                border: 0.25em solid rgb(13, 182, 24);
+                font-size: 1em;
+                position: absolute;
+                mix-blend-mode: screen;
+            }
+            .loader{
+                background-color: black;
+                animation: rotating 2s linear infinite;
+            }
+            @keyframes rotating {
+                to{
+                    transform: rotate(1turn);
+                }
+            }
+            .loader span{
+                animation: de-rotating 4s linear infinite;
+            }
+            @keyframes de-rotating {
+                fron, to{
+                    transform: rotate(0deg)
+                    scale(0.5);
+                }
+                50%{
+                    transform: rotate(-180deg);
+                    scale(1.2);
+                }
+            }
+            .loader span:nth-child(1){
+                top: 5em;
+                left: 5em;
+                background-color: aqua;
+            }
+            .loader span:nth-child(2){
+                top: -5em;
+                left: 5em;
+                background-color: crimson;
+            }
+            .loader span:nth-child(3){
+                top: 5em;
+                left: -5em;
+                background-color: goldenrod;
+            }
+            .loader span:nth-child(4){
+                top: -5em;
+                left: -5em;
+                background-color: limegreen;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </body>
+</html>
